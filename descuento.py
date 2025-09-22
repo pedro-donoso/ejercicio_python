@@ -1,14 +1,17 @@
 # Solicitar datos
 cantidad = int(input("Cantidad de productos: "))
 precio_total = float(input("Precio total: $"))
+compras_previas= int(input("Compras previas: "))
 
-# Calcular descuento
+# Calcular descuentos
+descuento_cantidad = 0
+descuento_frecuente = 0
+
+# Descuento por cantidad (más de 10 productos)
 if cantidad > 10:
-    descuento = precio_total * 0.10
-    precio_final = precio_total - descuento
-    print(f"\nDescuento aplicado: 10%")
-    print(f"Descuento: ${descuento:.2f}")
-    print(f"Precio final: ${precio_final:.2f}")
-else:
-    print(f"\nSin descuento")
-    print(f"Precio final: ${precio_total:.2f}")
+    descuento_cantidad = 10
+
+# Descuento por cliente frecuente (más de 5 compras previas)
+if compras_previas > 5:
+    descuento_frecuente = 5
+
