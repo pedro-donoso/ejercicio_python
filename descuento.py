@@ -15,3 +15,7 @@ if cantidad > 10:
 if compras_previas > 5:
     descuento_frecuente = 5
 
+# Aplicar descuentos
+descuento_total = descuento_cantidad + descuento_frecuente
+descuento_monto = precio_total * (descuento_total / 100)
+precio_final = precio_total - descuento_monto
