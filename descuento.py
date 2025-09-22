@@ -19,3 +19,10 @@ if compras_previas > 5:
 descuento_total = descuento_cantidad + descuento_frecuente
 descuento_monto = precio_total * (descuento_total / 100)
 precio_final = precio_total - descuento_monto
+
+# Mostrar resultado
+print(f"\nDescuento por cantidad: {descuento_total}%")
+print(f"Descuento por cliente frecuente: {descuento_frecuente}%")
+print(f"Descuento total: {descuento_total}")
+print(f"Descuento: ${descuento_monto:.2f}")
+print(f"Precio final: ${precio_final:.2f}")
