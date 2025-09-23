@@ -38,3 +38,27 @@ for numero in range(1, 101):
 
 print("-" * 30)
 print("¡Contando Vanilla Ice completado!")
+
+print("\n" + "=" * 50)
+
+# Wow. Número gigante a la vista: suma de números pares del 0 al 500,000
+print("Wow. Número gigante a la vista:")
+print("Sumando números pares del 0 al 500,000...")
+print("-" * 50)
+
+# Inicializar la suma
+suma_pares = 0
+contador_pares = 0
+
+# Bucle for que suma todos los números pares del 0 al 500,000
+print("Calculando... (esto puede tomar unos segundos)")
+for numero in range(0, 500001, 2): #Rango con paso de 2 para solo números pares
+    suma_pares += numero
+    contador_pares += 1
+
+# Mostrar los resultados
+print(f"Números pares sumados: {contador_pares:,}")
+print(f"Suma total de números pares del 0 al 500,000:")
+print(f"{suma_pares:,}")
+print("-" * 50)
+print("¡Número gigante completado!")
