@@ -28,6 +28,11 @@ if promocion_especial:
 
 # Aplicar descuentos
 descuento_total = descuento_cantidad + descuento_frecuente + descuento_monto + descuento_promocion
+
+# Limitar descuento máximo al 30%
+if descuento_total > 30:
+    descuento_total = 30
+
 descuento_monto_total = precio_total * (descuento_total / 100)
 precio_final = precio_total - descuento_monto_total
 
