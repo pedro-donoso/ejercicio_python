@@ -62,3 +62,20 @@ print(f"Suma total de números pares del 0 al 500,000:")
 print(f"{suma_pares:,}")
 print("-" * 50)
 print("¡Número gigante completado!")
+
+print("\n" + "=" * 50)
+
+# Regrésame al 3: cuenta regresiva de 3 en 3 desde 2024
+print("Regrésame al 3:")
+print("Cuenta regresiva de 3 en 3 desde 2024...")
+print("-" * 50)
+
+# Bucle for que cuenta regresivamente de 3 en 3 desde 2024 hasta números positivos
+contador_numeros = 0
+for numero in range(2024, 0, -3): # Desde 2024 hacia 0, decrementando de 3 en 3
+    print(numero)
+    contador_numeros += 1
+
+print("-" * 50)
+print(f"¡Cuenta regresiva completada! Total de números: {contador_numeros}")
+print(f"Último número positivo: {numero}")
