@@ -10,11 +10,12 @@ excursiones = [
 
 # Mostrar excursiones disponibles
 print("EXCURSIONES DISPONIBLES")
-print("=" * 40)
+print('=' * 40)
 for exc in excursiones:
-    if exc["cupos"] > 0:
+    if exc['cupos'] > 0:
         print(
-            f"{exc['id']}. {exc['nombre']} - {exc['fecha']} - " f"{exc['cupos']} cupos"
+            f"{exc['id']}. {exc['nombre']} - {exc['fecha']} - "
+            f"{exc['cupos']} cupos"
         )
 
 # Realizar resereva
@@ -27,13 +28,13 @@ try:
     # Buscar la excursión
     excursion_encontrada = None
     for exc in excursiones:
-        if exc["id"] == id_excursion:
+        if exc['id'] == id_excursion:
             excursion_encontrada = exc
             break
 
     if excursion_encontrada is None:
             print("Número de excursión no válido")
-    elif excursion_encontrada["cupos"] <= 0:
+    elif excursion_encontrada['cupos'] <= 0:
             print("No hay cupos disponibles para esta excursión")
     else:
             # Confirmar reserva antes de realizarla
@@ -43,8 +44,8 @@ try:
 
             confirmacion = input("¿Desea confirmar su reserva? (s/n): ").lower()
 
-            if confirmacion == "s" or confirmacion == "si":
-                excursion_encontrada["cupos"] -= 1
+            if confirmacion == 's' or confirmacion == 'si':
+                excursion_encontrada['cupos'] -= 1
                 print(f"Reserva confirmada para {nombre}")
                 print(f"Cupos restantes: {excursion_encontrada['cupos']}")
             else:
